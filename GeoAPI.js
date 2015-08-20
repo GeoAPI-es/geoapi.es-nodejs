@@ -7,7 +7,7 @@ module.exports = function() {
 	var self = this;
 	
 	this.conf = {
-		url: 'apiv1.geoapi.es/',
+		url: 'apiv1.geoapi.es',
 		type: 'JSON',
 		key: '',
 		sandbox: 0
@@ -44,7 +44,7 @@ module.exports = function() {
 			var req = http.request({
 				method: 'GET',
 				hostname: self.conf.url,
-				path: accion + '?' + querystring.stringify(params)
+				path: '/' + accion + '?' + querystring.stringify(params)
 			}, function(res){
 				res.setEncoding('utf8');
 				
