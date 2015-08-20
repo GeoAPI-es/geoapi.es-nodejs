@@ -1,31 +1,31 @@
 {
-  "name": "@geoapi.es/js",
-  "version": "0.0.2",
-  "description": "Libreria en JS para GeoAPI.es",
+  "name": "@geoapi.es/nodejs",
+  "version": "0.0.1",
+  "description": "Libreria en NodeJS para GeoAPI.es",
   "keywords": [
     "geoapi",
     "españa",
     "js"
   ],
-  "homepage": "https://github.com/Gozala/test-commonjs/",
+  "homepage": "https://github.com/GeoAPI-es/geoapi.es-nodejs/",
   "author": "Alexaner Nestorov <alexandernst@gmail.com> (http://alexandernst.com)",
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/GeoAPI-es/geoapi.es-js.git",
-    "web": "https://github.com/GeoAPI-es/geoapi.es-js"
+    "url": "https://github.com/GeoAPI-es/geoapi.es-nodejs.git",
+    "web": "https://github.com/GeoAPI-es/geoapi.es-nodejs"
   },
   "bugs": {
-    "url": "https://github.com/GeoAPI-es/geoapi.es-js/issues/"
+    "url": "https://github.com/GeoAPI-es/geoapi.es-nodejs/issues/"
   },
-  "main": "./GeoAPI.js",
+  "main": "GeoAPI.js",
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/GeoAPI-es/geoapi.es-js/LICENSE"
+      "url": "https://github.com/GeoAPI-es/geoapi.es-nodejs/LICENSE"
     }
   ],
-  "dependencies": {
-    "angular": "^1.3 || ^1.4"
-  }
+  "dependencies": [
+    "q": "~1"
+  ]
 }
