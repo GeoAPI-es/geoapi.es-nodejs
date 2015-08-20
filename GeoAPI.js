@@ -68,7 +68,7 @@ module.exports = function() {
 			});
 			
 			req.on("error", function(e) {
-				deferred.rejectr(e);
+				deferred.reject(e);
 				console.log("Error: ", e.message);
 			});
 			
