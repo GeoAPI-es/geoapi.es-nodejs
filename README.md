@@ -1,4 +1,4 @@
-# geoapi.es-js
+# geoapi.es-nodejs
 Librería en JS para GeoAPI.es
 
 ### Cómo empezar
@@ -7,9 +7,9 @@ Es preferible leer la [documentación general](https://github.com/GeoAPI-es/geoa
 
 La librería esta disponible en [npm](https://npmjs.org/).
 
-Para instalar <b>geoapi.es-js</b> y sus dependencias, es suficiente con añadir
+Para instalar <b>geoapi.es-nodejs</b> y sus dependencias, es suficiente con añadir
 
-    "@geoapi.es/nodejs": "~0.0.1"
+    "@geoapi.es/nodejs": "~1.0.0"
 
 en la sección `dependencies` de tu archivo `package.json`.
 
@@ -20,8 +20,7 @@ La librería tiene 2 partes importantes.
 De base usaremos el siguiente código para poder explicar mejor cada parte.
 
 ```javascript
-var app = angular.module('app', ['GeoAPI']);
-app.controller('MainCtrl', function($scope, $timeout, GeoAPI){ ...
+var GeoAPI = require("@geoapi.es/nodejs")();
 ```
 
 * Configuracion
@@ -68,5 +67,7 @@ GeoAPI.comunidades({
     //Sin argumentos
 }).then(function($respuesta) {
     console.log($respuesta);
+}, function($error) {
+    console.log($error);
 });
 ```
