@@ -38,30 +38,35 @@ module.exports = function() {
 		},
 		
 		_call: function(accion, params, deferred){
-			params = extend(self.conf, params);
+			params = extend(extend({}, self.conf), params);
 			delete params.url;
-			
+
 			var req = http.request({
 				method: 'GET',
 				hostname: self.conf.url,
 				path: '/' + accion + '?' + querystring.stringify(params)
 			}, function(res){
+				var data = "";
 				res.setEncoding('utf8');
 				
 				res.on("data", function(chunk) {
+					data += chunk;
+				});
+				
+				res.on("end", function() {
 					self._data = {
 						lastQuery: {
-							url: self.config.url + accion,
+							url: self.conf.url + accion,
 							params: params
 						},
 						lastResult: {
 							status: res.statusCode,
-							res: JSON.parse(chunk)
+							res: JSON.parse(data)
 						}
 					};
-
+					
 					if(res.statusCode == 200){
-						deferred.resolve(JSON.parse(chunk));
+						deferred.resolve(JSON.parse(data));
 					}
 				});
 
