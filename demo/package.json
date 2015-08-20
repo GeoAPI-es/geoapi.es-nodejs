@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "@geoapi.es/nodejs": "~0"
+    "@geoapi.es/nodejs": "~1"
   }
 }
