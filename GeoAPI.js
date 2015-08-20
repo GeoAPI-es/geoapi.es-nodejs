@@ -1,6 +1,7 @@
 var q = require('q');
 var http = require('http');
 var extend = require('util')._extend;
+var querystring = require('querystring');
 
 module.exports = function() {
 	var self = this;
