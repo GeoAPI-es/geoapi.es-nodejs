@@ -9,7 +9,7 @@ La librería esta disponible en [npm](https://npmjs.org/).
 
 Para instalar <b>geoapi.es-js</b> y sus dependencias, es suficiente con añadir
 
-    "@geoapi.es/js": "~0.0.1"
+    "@geoapi.es/nodejs": "~0.0.1"
 
 en la sección `dependencies` de tu archivo `package.json`.
 

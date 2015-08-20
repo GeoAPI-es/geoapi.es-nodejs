@@ -25,7 +25,7 @@
       "url": "https://github.com/GeoAPI-es/geoapi.es-nodejs/LICENSE"
     }
   ],
-  "dependencies": [
+  "dependencies": {
     "q": "~1"
-  ]
+  }
 }
